@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Sign up for an account"
+        android:textColor="#D81B60"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailError"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordError"
+        app:layout_constraintTop_toBottomOf="@+id/signUp"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:layout_editor_absoluteX="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enterEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email address"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSignUp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailError"
+
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enterPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your password"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0000FF"
+
+        android:text="Sign In"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
